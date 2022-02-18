@@ -14,8 +14,10 @@
     "@emotion/react": "latest",
     "@emotion/server": "latest",
     "@emotion/styled": "latest",
+    "@iktakahiro/gradient-mui-button": "^0.9.4",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "@mui/styles": "^5.4.2",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"

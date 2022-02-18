@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
+import { green, red } from '@mui/material/colors';
 import { cyan } from '@mui/material/colors';
 
 const theme = createTheme({
@@ -8,7 +8,7 @@ const theme = createTheme({
       main: cyan[700],
     },
     secondary: {
-      main: '#f44336',
+      main: cyan[600],
     },
     error: {
       main: red.A400,

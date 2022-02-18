@@ -3,9 +3,7 @@ import type { NextPage } from 'next';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Link from '../../src/Link';
-import ProTip from '../../src/ProTip';
-import Copyright from '../../src/Copyright';
+import Link from '../../src/Link'; 
 //Navbar
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,12 +13,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
+import { keyframes } from '@mui/system';
 
+//keyframe de cambio de color del boton Navbar en la categìa en la que se encuentra el usuario
+const spin = keyframes`
+  from{background: #00acc1}
+  to{background: #0097a7}
+`;
 
-import Stack from '@mui/material/Stack';
-
-
+//Categorías Navabar
 const pages = [
       'DESARROLLADOR DE SOFTWARE',
       'CONTADORÍA & ADMINISTRACIÓN',
@@ -231,24 +232,6 @@ const indexCatA: NextPage = () => {
               <Typography textAlign="center" color="primary">{categoriH}</Typography>                 
               </Button>
               </Link>
-              {/* CATEGORIA I */}
-              <Link href="/categoriI/indexCatI">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-              <Typography textAlign="center" color="primary">{categoriI}</Typography>                
-              </Button>
-              </Link>
-              {/* CATEGORIA J */}
-              <Link href="/categoriJ/indexCatJ">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-              <Typography textAlign="center" color="primary">{categoriJ}</Typography>               
-              </Button>
-              </Link>
             </Menu>
           </Box>
           <Typography
@@ -267,7 +250,7 @@ const indexCatA: NextPage = () => {
               <Link href="/categoriA/indexCatA">         
               <Button
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', animation: `${spin} 4s infinite ease`}}
                 variant="contained"
               >
               {categoriA}
@@ -334,24 +317,6 @@ const indexCatA: NextPage = () => {
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
               {categoriH}                
-              </Button>
-              </Link>
-              {/* CATEGORIA I */}
-              <Link href="/categoriI/indexCatI">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-              {categoriI}                
-              </Button>
-              </Link>
-              {/* CATEGORIA J */}
-              <Link href="/categoriJ/indexCatJ">
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-              {categoriJ}                
               </Button>
               </Link>
           </Box>
