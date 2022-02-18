@@ -19,6 +19,8 @@ export default function MyApp(props: MyAppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/ddllgbo70/image/upload/v1638329234/assetsPortafolioMiguelPaez/miguelFoto100x100Jpg_hkft5u.jpg" />
+        <title>Miguel Páez</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
